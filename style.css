@@ -37,13 +37,24 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-fallback {
     font-weight: 800;
     font-size: 1.8rem;
     letter-spacing: -0.02em;
     white-space: nowrap;
 }
 
-.logo span {
+.logo-fallback span {
     background: linear-gradient(135deg, #f97316, #3b82f6);
     -webkit-background-clip: text;
     background-clip: text;
@@ -562,9 +573,7 @@ video.gallery-media {
         flex-direction: column;
         gap: 1rem;
     }
-    .logo {
-        font-size: 1.5rem;
-        white-space: normal;
-        text-align: center;
+    .logo-img {
+        max-height: 50px;
     }
 }
