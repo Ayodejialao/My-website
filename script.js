@@ -2,6 +2,60 @@
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
+    // --- UPLOAD PROTECTION: Only you (owner) can upload ---
+    // Simple email-based authentication simulation
+    // In a real scenario, this would be handled by a backend.
+    // For demo purposes, we'll prompt for the owner email.
+    const ownerEmail = 'mickeydesigns0@gmail.com';
+    let isOwner = false;
+
+    function checkOwner() {
+        // Try to get from session storage first (so not prompted every time)
+        let storedAuth = sessionStorage.getItem('mickeyAiOwner');
+        if (storedAuth === 'true') {
+            isOwner = true;
+            document.getElementById('uploadArea').style.display = 'flex';
+            return;
+        }
+
+        // Otherwise ask
+        let userInput = prompt('Enter owner email to enable uploads:');
+        if (userInput && userInput.trim().toLowerCase() === ownerEmail) {
+            isOwner = true;
+            sessionStorage.setItem('mickeyAiOwner', 'true');
+            document.getElementById('uploadArea').style.display = 'flex';
+        } else {
+            alert('Access denied. Uploads are restricted to the site owner.');
+            document.getElementById('uploadArea').style.display = 'none';
+        }
+    }
+
+    // Only prompt if we're on a page with upload area (gallery section exists)
+    if (document.getElementById('uploadArea')) {
+        checkOwner();
+    }
+
+    // --- LOGO HANDLING: try to load image, fallback to text ---
+    const logoImg = document.querySelector('.logo-img');
+    const logoFallback = document.getElementById('logo-fallback');
+    if (logoImg) {
+        // If image fails to load, show fallback text
+        logoImg.onerror = function() {
+            logoImg.style.display = 'none';
+            if (logoFallback) {
+                logoFallback.style.display = 'block';
+            }
+        };
+        // If image loads successfully, hide fallback
+        logoImg.onload = function() {
+            logoImg.style.display = 'block';
+            if (logoFallback) {
+                logoFallback.style.display = 'none';
+            }
+        };
+    }
+
+    // --- GALLERY UPLOAD FUNCTIONALITY ---
     const imageUpload = document.getElementById('imageUpload');
     const videoUpload = document.getElementById('videoUpload');
     const galleryGrid = document.getElementById('galleryGrid');
@@ -50,9 +104,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // handle image upload (multiple)
+    // handle image upload (multiple) - only if owner (but check inside event too)
     if (imageUpload) {
         imageUpload.addEventListener('change', async (e) => {
+            if (!isOwner) {
+                alert('Uploads are restricted to the site owner.');
+                imageUpload.value = '';
+                return;
+            }
             const files = Array.from(e.target.files);
             for (let file of files) {
                 if (file.type.startsWith('image/')) {
@@ -67,6 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // handle video upload
     if (videoUpload) {
         videoUpload.addEventListener('change', async (e) => {
+            if (!isOwner) {
+                alert('Uploads are restricted to the site owner.');
+                videoUpload.value = '';
+                return;
+            }
             const files = Array.from(e.target.files);
             for (let file of files) {
                 if (file.type.startsWith('video/')) {
