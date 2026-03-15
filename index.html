@@ -15,10 +15,12 @@
 </head>
 <body>
 
-    <!-- Minimalist navigation with custom logo (text from image) -->
+    <!-- Minimalist navigation with custom logo (image uploaded by you) -->
     <nav class="navbar">
         <div class="logo">
-            MICKEYWEBSITE<span>AI DESIGNS</span>
+            <!-- Logo image: replace src with your uploaded image file name (e.g., mickey-logo.png) -->
+            <img src="mickey-logo.png" alt="MICKEYWEBSITE AI DESIGNS" class="logo-img" onerror="this.onerror=null; this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+            <span class="logo-fallback" id="logo-fallback" style="display: none;">MICKEYWEBSITE<span>AI DESIGNS</span></span>
         </div>
         <div class="nav-links">
             <a href="#gallery">Gallery</a>
@@ -96,12 +98,12 @@
         </div>
     </section>
 
-    <!-- GALLERY SECTION with upload (images & videos) -->
+    <!-- GALLERY SECTION with upload (images & videos) - only you can upload -->
     <section class="gallery-section" id="gallery">
         <div class="gallery-header">
             <h2>Design gallery</h2>
-            <!-- UPLOAD CONTROLS - MODERN & CLEAN -->
-            <div class="upload-area">
+            <!-- UPLOAD CONTROLS - only visible to you (authentication simulation) -->
+            <div class="upload-area" id="uploadArea" style="display: none;">
                 <label for="imageUpload" class="upload-btn"><i class="fas fa-image"></i> Upload image</label>
                 <input type="file" id="imageUpload" accept="image/*" multiple>
                 <label for="videoUpload" class="upload-btn"><i class="fas fa-video"></i> Upload video</label>
@@ -134,10 +136,10 @@
                 <div class="gallery-caption"><span>Elephant Dream</span> <i class="fas-regular fa-circle-play"></i></div>
             </div>
         </div>
-        <p style="text-align: right; margin-top: 0.8rem; color: #9ca3af; font-weight: 500;"><i class="fas-regular fa-cloud-arrow-up"></i> Upload your own images/videos — they appear below.</p>
+        <p style="text-align: right; margin-top: 0.8rem; color: #9ca3af; font-weight: 500;"><i class="fas-regular fa-cloud-arrow-up"></i> Uploads appear below (owner only).</p>
     </section>
 
-    <!-- CONTACT ME SECTION (WhatsApp & Instagram) -->
+    <!-- CONTACT ME SECTION (WhatsApp, Instagram, and Gmail) -->
     <section class="contact-page" id="contact">
         <div class="contact-grid">
             <!-- left side: contact info with cards -->
@@ -145,7 +147,7 @@
                 <h2>
                     Let's connect <br><span class="gradient-text">personally</span>
                 </h2>
-                <p class="contact-intro">Reach out directly via WhatsApp or follow my AI design journey on Instagram. I reply within hours.</p>
+                <p class="contact-intro">Reach out directly via WhatsApp, Instagram, or email. I reply within hours.</p>
                 
                 <div class="contact-cards">
                     <!-- WhatsApp card with +2349072207517 -->
@@ -164,14 +166,14 @@
                             <p>@mickey_web_ai_designs</p>
                         </div>
                     </a>
-                    <!-- optional extra card: you can add email later but keep minimal -->
-                    <div class="contact-card" style="cursor: default; opacity:0.9;">
+                    <!-- Gmail card (new) -->
+                    <a href="mailto:mickeydesigns0@gmail.com" class="contact-card">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-detail">
-                            <h3>Email (soon)</h3>
-                            <p>mickey@mickeyai.com</p>
+                            <h3>Email</h3>
+                            <p>mickeydesigns0@gmail.com</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -179,12 +181,13 @@
             <div class="contact-highlight">
                 <i class="fas fa-comment-dots"></i>
                 <h3>Say hi, anytime</h3>
-                <p>Direct chat on WhatsApp • daily stories on Instagram</p>
+                <p>WhatsApp • Instagram • Gmail</p>
                 <div class="social-mini-links">
                     <a href="https://wa.me/2349072207517" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.instagram.com/mickey_web_ai_designs?igsh=Z3Z1ZzY2NG5sa2Ro" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:mickeydesigns0@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
-                <p style="margin-top: 2rem; font-size: 0.95rem;">+234 907 220 7517  ·  @mickey_web_ai_designs</p>
+                <p style="margin-top: 2rem; font-size: 0.95rem;">+234 907 220 7517  ·  @mickey_web_ai_designs  ·  mickeydesigns0@gmail.com</p>
             </div>
         </div>
     </section>
@@ -199,6 +202,7 @@
                 <a href="#contact">Contact</a>
                 <a href="https://instagram.com/mickey_web_ai_designs" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/2349072207517" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:mickeydesigns0@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
