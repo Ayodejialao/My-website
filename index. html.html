@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mickey AI · AI Designs</title>
+    <!-- Google Fonts: bold sans-serif (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free) for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Minimalist navigation with custom logo (text from image) -->
+    <nav class="navbar">
+        <div class="logo">
+            MICKEYWEBSITE<span>AI DESIGNS</span>
+        </div>
+        <div class="nav-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero with gradient & white space -->
+    <section class="hero" id="home">
+        <div>
+            <h1>
+                Where <span class="gradient-text">AI creativity</span><br>meets bold design.
+            </h1>
+            <p>Generate stunning characters, build powerful business sites — all with the magic of Mickey AI.</p>
+            <a href="#" class="cta-button">Start creating →</a>
+        </div>
+        <!-- abstract gradient bubble (visual only) -->
+        <div style="width: 280px; height: 280px; background: radial-gradient(circle at 30% 30%, #feb2b2, #3b82f6); border-radius: 60px; opacity: 0.3; filter: blur(40px);"></div>
+    </section>
+
+    <!-- Scrolling marquee: AI character designs -->
+    <div class="marquee-section">
+        <div class="marquee-label">
+            <i class="fas fa-robot"></i>
+            <h2>AI character flow</h2>
+        </div>
+        <div class="marquee">
+            <div class="marquee-track">
+                <!-- set A -->
+                <div class="marquee-item"><img src="https://placehold.co/400x400/f97316/white?text=VectorBot" alt="AI character"><span>VectorBot</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/3b82f6/white?text=Lumina" alt="AI character"><span>Lumina</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/facc15/white?text=Glitch" alt="AI character"><span>Glitch</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/a855f7/white?text=NeoPulse" alt="AI character"><span>NeoPulse</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/ef4444/white?text=Blaze" alt="AI character"><span>Blaze</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/10b981/white?text=Aether" alt="AI character"><span>Aether</span></div>
+                <!-- duplicate for seamless loop -->
+                <div class="marquee-item"><img src="https://placehold.co/400x400/f97316/white?text=VectorBot" alt="AI character"><span>VectorBot</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/3b82f6/white?text=Lumina" alt="AI character"><span>Lumina</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/facc15/white?text=Glitch" alt="AI character"><span>Glitch</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/a855f7/white?text=NeoPulse" alt="AI character"><span>NeoPulse</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/ef4444/white?text=Blaze" alt="AI character"><span>Blaze</span></div>
+                <div class="marquee-item"><img src="https://placehold.co/400x400/10b981/white?text=Aether" alt="AI character"><span>Aether</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Website Solutions dedicated section (Services) -->
+    <section class="business-solutions" id="services">
+        <div class="business-header">
+            <h2>Business website solutions</h2>
+            <p>Tailored for impact, speed & conversion.</p>
+        </div>
+        <div class="solution-grid">
+            <div class="solution-card">
+                <div class="solution-icon"><i class="fas fa-bolt"></i></div>
+                <h3>AI launch</h3>
+                <p>Fully responsive site with AI-generated copy & visuals — live in hours.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon"><i class="fas fa-cart-shopping"></i></div>
+                <h3>eCommerce+AI</h3>
+                <p>Smart product recommendations and AI chat that converts.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Growth suite</h3>
+                <p>Analytics, SEO, and AI marketing tools built into every site.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon"><i class="fas fa-palette"></i></div>
+                <h3>Custom design</h3>
+                <p>Stand out with unique, gradient-forward branding & micro‑interactions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION with upload (images & videos) -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-header">
+            <h2>Design gallery</h2>
+            <!-- UPLOAD CONTROLS - MODERN & CLEAN -->
+            <div class="upload-area">
+                <label for="imageUpload" class="upload-btn"><i class="fas fa-image"></i> Upload image</label>
+                <input type="file" id="imageUpload" accept="image/*" multiple>
+                <label for="videoUpload" class="upload-btn"><i class="fas fa-video"></i> Upload video</label>
+                <input type="file" id="videoUpload" accept="video/*" multiple>
+            </div>
+        </div>
+
+        <!-- Gallery grid - dynamically filled with your uploads + some demo starters -->
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- demo placeholder items (will be removed by uploads but nice as preview) -->
+            <div class="gallery-item">
+                <img src="https://placehold.co/600x400/3b82f6/white?text=Neon+Wave" alt="design" class="gallery-media">
+                <div class="gallery-caption"><span>Neon Wave</span> <i class="fas-regular fa-star"></i></div>
+            </div>
+            <div class="gallery-item">
+                <video class="gallery-media" loop muted playsinline poster="https://placehold.co/600x400/f97316/white?text=video+preview">
+                    <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+                <div class="gallery-caption"><span>Big Buck (demo)</span> <i class="fas-regular fa-circle-play"></i></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/600x400/a855f7/white?text=Glitch+Portrait" alt="design" class="gallery-media">
+                <div class="gallery-caption"><span>Glitch Portrait</span> <i class="fas-regular fa-image"></i></div>
+            </div>
+            <div class="gallery-item">
+                <video class="gallery-media" loop muted playsinline poster="https://placehold.co/600x400/10b981/white?text=video+demo">
+                    <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption"><span>Elephant Dream</span> <i class="fas-regular fa-circle-play"></i></div>
+            </div>
+        </div>
+        <p style="text-align: right; margin-top: 0.8rem; color: #9ca3af; font-weight: 500;"><i class="fas-regular fa-cloud-arrow-up"></i> Upload your own images/videos — they appear below.</p>
+    </section>
+
+    <!-- CONTACT ME SECTION (WhatsApp & Instagram) -->
+    <section class="contact-page" id="contact">
+        <div class="contact-grid">
+            <!-- left side: contact info with cards -->
+            <div class="contact-info">
+                <h2>
+                    Let's connect <br><span class="gradient-text">personally</span>
+                </h2>
+                <p class="contact-intro">Reach out directly via WhatsApp or follow my AI design journey on Instagram. I reply within hours.</p>
+                
+                <div class="contact-cards">
+                    <!-- WhatsApp card with +2349072207517 -->
+                    <a href="https://wa.me/2349072207517" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-detail">
+                            <h3>WhatsApp</h3>
+                            <p>+234 907 220 7517</p>
+                        </div>
+                    </a>
+                    <!-- Instagram card with provided link -->
+                    <a href="https://www.instagram.com/mickey_web_ai_designs?igsh=Z3Z1ZzY2NG5sa2Ro" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                        <div class="contact-detail">
+                            <h3>Instagram</h3>
+                            <p>@mickey_web_ai_designs</p>
+                        </div>
+                    </a>
+                    <!-- optional extra card: you can add email later but keep minimal -->
+                    <div class="contact-card" style="cursor: default; opacity:0.9;">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-detail">
+                            <h3>Email (soon)</h3>
+                            <p>mickey@mickeyai.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right side: highlight / reminder -->
+            <div class="contact-highlight">
+                <i class="fas fa-comment-dots"></i>
+                <h3>Say hi, anytime</h3>
+                <p>Direct chat on WhatsApp • daily stories on Instagram</p>
+                <div class="social-mini-links">
+                    <a href="https://wa.me/2349072207517" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mickey_web_ai_designs?igsh=Z3Z1ZzY2NG5sa2Ro" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p style="margin-top: 2rem; font-size: 0.95rem;">+234 907 220 7517  ·  @mickey_web_ai_designs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with minimal navigation & credit -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>© Mickey AI · AI designs & business solutions</div>
+            <div class="footer-links">
+                <a href="#gallery">Gallery</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="https://instagram.com/mickey_web_ai_designs" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/2349072207517" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- external script -->
+    <script src="script.js"></script>
+</body>
+</html>
